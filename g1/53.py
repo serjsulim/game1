@@ -17,7 +17,7 @@ while True:
         if event.type == pygame.QUIT:            # якщо натиснуто хрестик на вікні 
             sys.exit()                           #  то вихід
     screen.fill(bg_color)                       # зафарбовуємо екран кольором
-    pygame.draw.ellipse(screen, boll_color, rect) # у прямокутник малюємо еліпс
+    pygame.draw.rect(screen, boll_color, rect) # у прямокутник малюємо еліпс
     screen.blit(image, rect1)                   # малюємо на екрані
     
     pygame.display.flip()                        # оновлюємо дисплей

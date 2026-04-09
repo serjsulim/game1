@@ -1,0 +1,24 @@
+# define colors
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+RED = (255, 0, 0)
+GREEN = (0, 255, 0)
+BLUE = (0, 0, 255)
+YELLOW = (255, 255, 0)
+LIGHTBLUE = (0, 155, 155)
+DARKGREY = (40, 40, 40)
+LIGHTGREY = (100, 100, 100)
+
+# game options/settings
+TITLE = "Game"
+WIDTH = 640   
+HEIGHT = 512 
+FPS = 60
+BGCOLOR = DARKGREY
+
+# Player properties
+PLAYER_ACC = 0.75
+PLAYER_SPEED = 300
+PLAYER_FRICTION = -0.12
+BUMP_TIME = 100
+

@@ -21,7 +21,7 @@ def run():
         controls.events(screen, raketka, boll)                     # відслідковуємо ракетку
         raketka.update_raketka()
         controls.update(bg_color, screen, raketka, boll)
-        boll.update()
+        boll.update(raketka, game)
 
 run()
 
