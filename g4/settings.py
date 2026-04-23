@@ -13,5 +13,20 @@ LIGHTGREY = (100, 100, 100)
 WIDTH = 1000      # ширина вікна
 HEIGHT = 700     # довжина вікна
 FPS = 60         # кількість кадрів на секунду
+
 BG_COLOR = DARKGREY # колір фону 
-SPEED_RAKETKA = 1
+BOLL_COLOR = RED   # колір м'яча
+TEXT_COLOR = BLUE   
+
+SPEED_RAKETKA = 10
+
+RADIUS_BOLL = 15  
+SPEED_BOLL_X = 5
+SPEED_BOLL_Y = 5
+
+BRICK_WIDTH = 80
+BRICK_HEIGHT = 30
+BRICK_COLOR = [BLACK, RED, GREEN, BLUE, YELLOW]
+ROW_AMAUNT = 1        # кількість рядів цеглинок
+
+

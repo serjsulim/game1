@@ -1,6 +1,11 @@
 import pygame
 from settings import *
+from boll import Boll
+from briks import Brick
 
+running = True     #    змінна, яка показує, коли зупинити гру
+win = True         #    змінна, яка показує виграш
+count = 0          #    рахунок гри
 
 def events(screen, raketka):              # обробка подій
     for event in pygame.event.get():             # для всіх подій що відбуваються у грі
@@ -18,7 +23,9 @@ def events(screen, raketka):              # обробка подій
             elif event.key == pygame.K_LEFT:       # якщо це вліво
                 raketka.mleft = False           # кажемо, що не натиснута a
                 
-def update(BG_COLOR, screen, raketka):      # оновлення екрану
+def update(BG_COLOR, screen, raketka, boll, brick):      # оновлення екрану
     screen.fill(BG_COLOR)                   # замалювати все вікно фоновим кольором
     raketka.output()                        # намалювати ракетку
+    boll.update(raketka)                    # відслідковуємо взаємодію м'яча з ракеткою
+    brick.drew(screen, boll)                # відслідковуємо взаємодію цеглинок із м'ячем
     pygame.display.flip()                   # промалювати кадр
