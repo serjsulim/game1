@@ -5,6 +5,7 @@ from settings import *               # із файлу settings імпортує
 from raketka import Raketka          # імпортуємо з файлу raketka клас Raketka 
 from boll import Boll
 import statistik
+from map import level_map
 from briks import Brick
 import time
 from drop import Drop
@@ -51,7 +52,15 @@ def run(level):
     statistik.draw_message(screen, f'Час гри: {controls.time_game// 60} хвилин {controls.time_game % 60} секунд', 100, TEXT_COLOR,   y_offset = 100)   
     pygame.time.wait(5000)      # чекати 10000 мілісекунд
 
-while controls.win:
+while controls.win and controls.level < len(level_map):
     run(controls.level)
+
+if controls.level >= len(level_map):
+    screen.fill(BG_COLOR)
+    statistik.draw_message(screen, 'You beat all levels!', 200, y_offset=-100)
+    statistik.draw_message(screen, f'Рахунок: {controls.count}', 100, TEXT_COLOR, y_offset=0)
+    statistik.draw_message(screen, f'Час гри: {controls.time_game// 60} хвилин {controls.time_game % 60} секунд', 100, TEXT_COLOR,   y_offset=100)
+    pygame.display.flip()
+    pygame.time.wait(5000)
 
 pygame.quit()    # вихід з гри

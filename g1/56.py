@@ -1,4 +1,5 @@
 from random import choice
+import pygame
 
 choice((-1,1))     # випадково зі списку
 
@@ -10,3 +11,5 @@ pygame.draw.ellipse(self.screen, self.color, self.rect)
 
 self.rect.colliderect(self.raketka): # якщо м'яч доторкнувся до ракетки
 
+# перед pygame.init()
+pygame.mixer.pre_init(44100, -16, 1, 512)
